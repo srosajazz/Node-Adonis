@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -14,15 +14,18 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use("Route");
+const Route = use('Route');
 
-Route.on("/").render("home");
-Route.get("/test", () => "Hello World");
+Route.on('/').render('home');
+Route.on('/tasks').render('tasks');
+Route.on('/add').render('add');
 
-//id
-Route.get("/test/:id", function({ params }) {
-  return `this is the id ${params.id}`;
-});
+// Route.get("/test", () => "Hello World");
 
-//Controller
-Route.get("/task", "TaskController.index");
+// //id
+// Route.get("/test/:id", function({ params }) {
+//   return `this is the id ${params.id}`;
+// });
+
+// //Controller
+// Route.get("/task", "TaskController.index");
