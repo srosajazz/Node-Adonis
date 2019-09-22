@@ -1,14 +1,14 @@
-"use strict";
+'use strict';
 
 class TaskController {
   index({ view }) {
     const tasks = [
-      { title: "Task one", body: "Test one" },
-      { title: "Task two", body: "Test two" }
+      { title: 'Task one', body: 'Test one' },
+      { title: 'Task two', body: 'Test two' },
     ];
-    return view.render("task", {
-      title: "Your tasks",
-      tasks: tasks
+    return view.render('tasks', {
+      title: 'Latest tasks',
+      tasks: tasks,
     });
   }
 }
