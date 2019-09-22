@@ -1,8 +1,9 @@
 @layout('main')
 @section('content')
-<h1 class="mb-4">New Task</h1>
+<h1 class="mb-3">New Task</h1>
 <form action="{{ route('/add')}}" method="POST">
-  <div class="mb-4">
+  {{csrfField()}}
+  <div class="mb-3">
     <label for="">Title:</label>
     <input type="text" class="form-control is-invalid"
     name="title" placeholder="Your title" value="">
@@ -10,7 +11,7 @@
       error!
     </div>
 
-    <div class="mb-4">
+    <div class="mb-3">
         <label for="">Title:</label>
         <textarea name="body" class="form-control is-invalid"
         placeholder="body"></textarea>
