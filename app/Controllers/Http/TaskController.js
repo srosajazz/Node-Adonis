@@ -1,14 +1,13 @@
 'use strict';
 
+const Task = use('App/Models/Task');
 class TaskController {
-  index({ view }) {
-    const tasks = [
-      { title: 'Task one', body: 'Test one' },
-      { title: 'Task two', body: 'Test two' },
-    ];
+  async index({ view }) {
+    const tasks = await Task.all();
+
     return view.render('tasks', {
       title: 'Latest tasks',
-      tasks: tasks,
+      tasks: tasks.toJSON(),
     });
   }
 }
