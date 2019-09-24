@@ -20,13 +20,3 @@ Route.on('/').render('home')
 Route.get('/tasks', 'TaskController.index')
 Route.on('/add').render('add')
 Route.post('/add', 'TaskController.store')
-
-// Route.get("/test", () => "Hello World")
-
-// //id
-// Route.get("/test/:id", function({ params }) {
-//   return `this is the id ${params.id}`;
-// })
-
-// //Controller
-// Route.get("/task", "TaskController.index")
